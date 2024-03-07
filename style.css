@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid  red; */
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #DAF0FF;
+}
+
+.calculator{
+    width: 375px;
+    height: 672px;
+    padding: 138px 33px 40px 33px;
+
+    background-color: #F7F8FB;
+    backdrop-filter: blur(51px);
+    border-radius: 39px;
+    box-shadow: 90px 100px 80px 0px rgba(0, 162, 255, 0.463);
+}
+
+.calculator .display{
+    width: 100%;
+}
+
+.calculator .display .operation{
+    height: 35px;
+    text-align: right;
+    color: #818181;
+    font-size: 24px;
+    font-weight: 300;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.calculator .display .result{
+    max-width: 100%;
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.calculator .display .result::-webkit-scrollbar{
+    height: 6px;
+}
+
+.calculator .display .result::-webkit-scrollbar-thumb{
+    background-color: #1BACFF;
+    border-radius: 6px;
+}
+
+.calculator .keyboard .container{
+   width: 100%;
+   height: auto;
+   display: flex;
+   justify-content: space-between;
+}
+
+.calculator .keyboard .container .left{
+    width: 226px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.calculator .keyboard .button{
+    width: 62px;
+    height: 60px;
+    color: #3889ff;
+    font-weight: 500;
+    font-size: 32px;
+    border-radius: 16px;
+    border: 1px solid #fff;
+    background-color:  linear-gradient(130deg, rgba(255, 255, 255, 0.60) -9.69%, rgba(255, 255, 255, 0.40) 114.23%);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 1s;
+}
+
+.calculator .keyboard .button:hover{
+    border: 2px solid #999494;
+
+}
+
+.calculator .keyboard .container .left .button .clean{
+    color: #858585;
+    font-weight: 400;
+}
+
+.calculator .keyboard .container .left .button.clean svg{
+    width: 20px;
+    height: 20px;
+}
+
+.calculator .keyboard .container .left .bigger{
+    width: 144px;
+}
+
+.calculator .keyboard .container .left .button:nth-child(3) {
+    background: #ADE2FF;
+}
+
+.calculator .keyboard .container .right{
+    width: 62px;
+    height: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator .keyboard .container .right .button {
+    border-radius: 12px;
+    background: #ADE2FF;
+    color: #109DFF;
+}
+
+.calculator .keyboard .container .right .button.bigger {
+    height: 96px;
+}
+
+.calculator .display .operation .sinal {
+    color: #109DFF;
+}
+
+
+
+
+/* Responsveness........................... */
+
+@media (max-width : 500px) {
+    .calculator{
+        width: 328.8px;
+        height: 597px;
+        padding: 121px 28.93px 35.07px 28.93px;
+    }
+
+    .calculator .display .operation {
+        height: 30.68px;
+        font-size: 21.04px;
+    }
+
+    .calculator .display .result {
+        font-size: 42.08px;
+    }
+
+    .calculator .display .operation::-webkit-scrollbar {
+        height: 2px;
+    }
+    .calculator .display .result::-webkit-scrollbar {
+        height: 3px;
+    }
+
+    calculator .keyboard {
+        gap: 17.53px;
+        padding-top: 68.39px;
+    }
+
+    .calculator .keyboard .button {
+        width: 54.36px;
+        height: 52.61px;
+        font-size: 28.05px;
+    }
+
+    .calculator .keyboard .container .left {
+        width: 198.16px;
+        gap: 17.53px;
+    }
+
+    .calculator .keyboard .container .left .button.clean svg {
+        width: 17.53px;
+        height: 17.53px;
+    }  
+
+    .calculator .keyboard .container .left .button.bigger {
+        width: 126.26px;
+    }
+
+    .calculator .keyboard .container .right {
+        width: 54.36px;
+        gap: 17.53px;
+    }
+
+    .calculator .keyboard .container .right .button.bigger {
+        height: 84.17px;
+    }
+}
